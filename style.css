@@ -1,3 +1,7 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
 body {
     margin: 0;
 }
@@ -45,17 +49,17 @@ body {
     color: white;
 }
 
-.sidebar > ul {
+.sidebar-content > ul {
     list-style-type: none;
 }
 
-.sidebar > ul > li {
-    padding-bottom: 10px;
+.sidebar-content > ul > li {
+    padding-bottom: 20px;
     font-size: 16px;
     font-weight: 600;
 }
 
-.sidebar > ul > li > a {
+.sidebar-content > ul > li > a {
     text-decoration: none;
     color: white;
 }
