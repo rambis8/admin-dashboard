@@ -96,6 +96,8 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr;
     color: black;
+    padding-bottom: 5%;
+    gap: 20px;
 }
 
 .left {
@@ -103,6 +105,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     margin-left: 3%;
+    gap: inherit;
 }
 
 .left h2 {
