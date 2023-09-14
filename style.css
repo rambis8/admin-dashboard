@@ -57,6 +57,21 @@ body {
 .searchbar {
     display: grid;
     grid-template-columns: 1fr 6fr;
+    align-items: center;
+}
+
+#search-icon {
+    display: grid;
+    justify-content: end;
+}
+
+.searchbar > input:nth-child(2) {
+    border-radius: 25px;
+    padding: 7px;
+    background-color: #F1F1F1;
+    border: 0px solid;
+    /* border: 1px solid #1C4E80; */
+    margin-right: 20px;
 }
 
 .userinfo {
@@ -100,7 +115,17 @@ body {
 }
 
 .project-item {
+    border-radius: 5px;
+    border-left: 5px solid orange;
     display: grid;
+    padding: 10px;
+}
+
+.project-item-buttons {
+    display: grid;
+    grid-auto-flow: column;
+    justify-self: end;
+
 }
 
 .project-item, .announcements, .trending {
