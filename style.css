@@ -27,7 +27,7 @@ body {
 }
 
 .sidebar-content>ul>li {
-    padding-bottom: 15px;
+    padding-bottom: 22px;
     font-size: 18px;
     font-weight: 700;
 }
@@ -51,6 +51,7 @@ body {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 2fr;
     padding-top: 10px;
+    padding-right: 20px;
     color: black;
 }
 
@@ -97,42 +98,68 @@ body {
     grid-template-columns: 2fr 1fr;
     color: black;
     padding-bottom: 5%;
-    gap: 20px;
+    padding-right: 20px;
+    gap: 25px;
 }
 
 .left {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
     margin-left: 3%;
     gap: inherit;
 }
 
-.left h2 {
+.right {
+    display: grid;
+    gap: inherit;
+}
+
+.left h3 {
     grid-column: 1 / 3;
 }
 
-.right {
-    /* display: grid; */
-    margin-left: 3%;
-}
-
 .project-item {
-    border-radius: 5px;
-    border-left: 5px solid orange;
+    border-left: 7px solid orange;
     display: grid;
     padding: 10px;
 }
 
+.project-item p, h4 {
+    margin-top: 0px;
+}
+
 .project-item-buttons {
+    padding: 10px 5px 10px 0px;
     display: grid;
+    gap: 5px;
     grid-auto-flow: column;
     justify-self: end;
+}
 
+.announcements {
+    display: grid;
+    padding: 20px;
+}
+
+div.announcement-item:nth-child(1) {
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+div.announcement-item:nth-child(2) {
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+.trending {
+    display: grid;
+    padding: 20px;
 }
 
 .project-item, .announcements, .trending {
     background-color: white;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
 /* .trending {
