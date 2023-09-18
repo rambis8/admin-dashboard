@@ -5,7 +5,7 @@ body, * {
     padding: 0;
 }
 
-/* Container for sidebar and main content */
+/* Container for sidebar and content */
 .container {
     display: grid;
     grid-template-columns: 250px auto;
@@ -88,57 +88,75 @@ body, * {
     grid-template-columns: repeat(3, 1fr);
 }
 
-/* Main Content Styles */
-.main-content {
+/* Content Styles */
+.content {
     background-color: #F1F1F1;
-    grid-column-start: 2;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 275px;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas: 'projects announcements'
+                        'projects trending';
     color: black;
-    padding-bottom: 5%;
-    padding-right: 20px;
+    padding: 25px;
     gap: 25px;
 }
 
-.left {
+h3 {
+    padding-bottom: 10px;
+}
+
+.projects {
+    grid-area: projects;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
+}
+
+.project-items {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-left: 3%;
-    gap: inherit;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
 }
 
-.right {
-    display: grid;
-    gap: inherit;
-}
-
-.left h3 {
-    grid-column: span 2;
-}
-
-.project-item {
+.project-card {
     border-left: 7px solid orange;
     display: grid;
-    padding: 10px;
 }
 
-.project-item p, h4 {
-    margin-top: 0px;
+.project-card p {
+    font-size: .95rem;
+    color: grey;
 }
 
-.project-item-buttons {
-    padding: 10px 5px 10px 0px;
+.project-card h4 {
+    margin-bottom: 4px;
+}
+
+.project-card-buttons {
+    padding-top: 20px;
     display: grid;
     gap: 5px;
     grid-auto-flow: column;
     justify-self: end;
 }
 
-/* Announcement and Trending Sections */
-.announcements,
-.trending {
-    display: grid;
-    padding: 20px;
+.announcement-item h4 {
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+.announcement-item p {
+    font-size: 0.85rem;
+    color: grey;
+}
+
+div.announcement-item:nth-child(2) > h4:nth-child(1),
+div.announcement-item:nth-child(3) > h4:nth-child(1) {
+    padding-top: 15px;
 }
 
 /* Styling for individual announcement items */
@@ -149,9 +167,10 @@ body, * {
 }
 
 /* Common styling for project items, announcements, and trending sections */
-.project-item,
-.announcements,
-.trending {
+.project-card,
+.announcements-content,
+.trending-content {
+    padding: 25px;
     background-color: white;
     border-radius: 7px;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
