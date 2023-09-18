@@ -159,6 +159,26 @@ div.announcement-item:nth-child(3) > h4:nth-child(1) {
     padding-top: 15px;
 }
 
+.trending-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: auto; */
+    padding-bottom: 30px;
+}
+
+.user-image {
+    width: 45px;
+    height: 45px;
+}
+
+.user-info {
+    font-size: 0.9rem;
+}
+
+.user-text {
+    color: grey;
+}
+
 /* Styling for individual announcement items */
 .announcement-item:nth-child(1),
 .announcement-item:nth-child(2) {
