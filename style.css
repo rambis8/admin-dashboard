@@ -76,16 +76,50 @@ body, * {
 
 .userinfo {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: .5fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.user img {
+    width: 45px;
+    height: 45px;
+}
+
+.userinfo p {
+    font-weight: 600;
 }
 
 .greeting {
     display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+}
+
+.greeting-picture img {
+    width: 70px;
+    height: 70px;
+    padding-right: 15px;
+}
+
+.greeting-user {
+    font-weight: 700;
+}
+.greeting-user > p:nth-child(1) {
+    padding-bottom: 5px;
+}
+.greeting-user > p:nth-child(2) {
+    font-size: 1.2rem;
 }
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+}
+
+.buttons button {
+    width: 100px;
+    height: 40px;
 }
 
 /* Content Styles */
@@ -138,7 +172,7 @@ h3 {
 }
 
 .project-card-buttons {
-    padding-top: 20px;
+    padding-top: 25px;
     display: grid;
     gap: 5px;
     grid-auto-flow: column;
@@ -161,14 +195,15 @@ div.announcement-item:nth-child(3) > h4:nth-child(1) {
 
 .trending-item {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: auto; */
-    padding-bottom: 30px;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding-bottom: 10px;
 }
 
-.user-image {
-    width: 45px;
+.user-image img {
+    max-width: 45px;
     height: 45px;
+    padding-right: 15px;
 }
 
 .user-info {
