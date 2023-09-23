@@ -59,7 +59,7 @@ body, * {
     background-color: white;
     grid-column: 2 / 3;
     display: grid;
-    grid-template-columns: 2fr .7fr;
+    grid-template-columns: 2fr auto;
     grid-template-rows: 1fr 2fr;
     padding: 10px 20px 0px 30px;
     color: black;
@@ -72,6 +72,7 @@ body, * {
     display: grid;
     grid-template-columns: min-content 6fr;
     align-items: center;
+    width: 600px;
 }
 
 #search-icon {
