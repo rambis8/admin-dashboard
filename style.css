@@ -61,6 +61,9 @@ body, * {
     grid-template-rows: 1fr 2fr;
     padding: 10px 20px 0px 30px;
     color: black;
+    box-shadow: 0px 3px 15px rgba(100, 100, 100, 0.29);
+    position: relative;
+    z-index: 10;
 }
 
 .searchbar {
