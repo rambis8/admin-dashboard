@@ -49,7 +49,7 @@ body, * {
     background-color: white;
     grid-column: 2 / 3;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr .7fr;
     grid-template-rows: 1fr 2fr;
     padding: 10px 20px;
     color: black;
@@ -76,9 +76,13 @@ body, * {
 
 .userinfo {
     display: grid;
-    grid-template-columns: .5fr 1fr 1fr;
+    grid-template-columns: repeat(3, auto);
     align-items: center;
     justify-items: center;
+}
+
+.alerts {
+    justify-self: end;
 }
 
 .user img {
@@ -86,6 +90,9 @@ body, * {
     height: 45px;
 }
 
+.userinfo-name {
+    justify-self: start;
+}
 .userinfo p {
     font-weight: 600;
 }
@@ -115,11 +122,20 @@ body, * {
 .buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: center;
 }
 
 .buttons button {
-    width: 100px;
-    height: 40px;
+    cursor: pointer;
+    color: white;
+    background-color: #de985e;
+    border: none;
+    width: 6rem;
+    height: 2rem;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: .9rem;
 }
 
 /* Content Styles */
